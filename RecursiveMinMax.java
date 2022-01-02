@@ -1,7 +1,7 @@
 package dsaassignment;
 
 
-public class MinMaxRecursion {
+public class RecursiveMinMax {
 
 	static int FindMax(int arr[],int n)
 	{
