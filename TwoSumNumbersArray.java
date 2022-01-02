@@ -1,6 +1,6 @@
 package dsaassignment;
 
-public class TwoSumNumbersofArray {
+public class TwoSumNumbersArray {
 	 public static void main(String[] args)
 	    {
 	        int[] num = {2,7,11,5};
