@@ -2,7 +2,7 @@ package dsaassignment;
 import java.util.Scanner;
 
 
-public class Fibonacci {
+public class RecursiveFibonacci {
 
 	static int n1=1,n2=1,n3=0;    
 	 static void printFibonacci(int count){    
