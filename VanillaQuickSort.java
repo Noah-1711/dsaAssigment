@@ -55,6 +55,6 @@ public class VanillaQuickSort {
         System.out.println("sorted array");
         printArray(arr);
     }
-
+   
 
 }
