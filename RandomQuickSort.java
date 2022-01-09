@@ -58,7 +58,7 @@ public class RandomQuickSort {
 	 
 	    public static void main(String args[]) 
 	    {
-	        System.out.println("Sorting is randomly generated");
+	        System.out.println("Sorting is randomly generated-");
 	        Random random = new Random();
 	 
 	        for (int i = 0; i < N; i++)
