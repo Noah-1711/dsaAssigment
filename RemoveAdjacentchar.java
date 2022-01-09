@@ -1,7 +1,7 @@
 package dsaassignment;
 import java.util.Stack;
 
-public class RemoveAdjacent {
+public class RemoveAdjacentchar {
 	public void removeAdjacentDuplicate(String text)
 	{
 		if (text.length() == 0)
@@ -44,7 +44,7 @@ public class RemoveAdjacent {
 	}
 	public static void main(String[] args)
 	{
-		RemoveAdjacent  task = new RemoveAdjacent ();
+		RemoveAdjacentchar  task = new RemoveAdjacentchar ();
 		
 		task.removeAdjacentDuplicate("Geekster");
 	

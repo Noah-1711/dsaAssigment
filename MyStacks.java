@@ -1,7 +1,7 @@
 package dsaassignment;
 import java.util.Stack;
 
-public class MyStack {
+public class MyStacks {
 	public static void main (String[] args) 
 	  { 
 	    // Creating a Stack

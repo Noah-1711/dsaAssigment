@@ -1,7 +1,7 @@
 package dsaassignment;
 import java.util.Stack;
 
-public class ReverseStringUsingStack {
+public class ReverseAStringUsingStack {
     public static String reverse(String str)
     {
         Stack<Character> stack = new Stack<>();
