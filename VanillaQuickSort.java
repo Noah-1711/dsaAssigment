@@ -2,7 +2,7 @@ package dsaassignment;
 import java.util.Arrays;
 
 
-public class VanillaQuickSort {
+public class VanillaQuicksort {
 	int partition(int arr[], int low, int high)
     {
         int pivot = arr[high]; 
