@@ -1,17 +1,17 @@
 package dsaassignment;
+import java.util.*;
 
 
-  
+ static class Node{
+	 int data;
+	 Node next;
+	 public Node(int data){
+	 this.data = data;
+	 next = null;
+	 }
+ }
 
 public class KthToLastElementofLL {
-	class Node{
-		 int data;
-		 Node next;
-		 public Node(int data){
-		 this.data = data;
-		 next = null;
-		 }
-	 }
 	
 	public int kthByRecursion(Node head, int k){
 		 if(head==null){
