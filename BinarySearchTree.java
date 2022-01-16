@@ -1,7 +1,6 @@
 package dsaassignment;
-import java.util.Queue;
+import java.util.*;
 import java.util.LinkedList;
-
 
 class Node
 {
@@ -14,8 +13,7 @@ class Node
 		left = right = null;
 	}
 }
-
-public class BinarySearchTree {
+public class BinarySearchTree{
 	static int levelSoFar=0;
 	public static void preorder(Node root) {
 		if(root==null) return;
@@ -46,11 +44,8 @@ public class BinarySearchTree {
             return -1;
         else
         {
-            /* compute the depth of each subtree */
             int lheight = getHeight(node.left);
             int rheight = getHeight(node.right);
-  
-            /* use the larger one */
             if (lheight >= rheight)
                 return (lheight + 1);
              else
@@ -67,18 +62,6 @@ public class BinarySearchTree {
 		print_leafNodes(root.left);
 		print_leafNodes(root.right);
 	}
-
-	// static void count_leafNodes(Node root){
-	// 	if(root == null) return;
-		
-	// 	if(root.left == null && root.right==null){
-	// 		return 1;
-	// 	}
-	// 	int leftCount = count_leafNodes(root.left);
-	// 	int rightCount = count_leafNodes(root.right);
-	// 	return leftCount+ rightCount;
-	// }
-
 	static int get_count(Node root){
 	    if(root==null){
 	        return 0;
@@ -87,28 +70,17 @@ public class BinarySearchTree {
 		int rightCount = get_count(root.right);
 	    return 1+ leftCount + rightCount;
 	}
-		
-	//Printing the left view nodes only.
 	static void leftView(Node root, int currlevel) {
 		if(root == null) return ;
 		
-		if(currlevel >= levelSoFar) {
-			//reached a new level 
+		if(currlevel >= levelSoFar) { 
 			System.out.println(root.key);
-			levelSoFar++; //indicates that i have visited this level
+			levelSoFar++; 
 		}
 		
 		leftView(root.left,currlevel+1);
 		leftView(root.right,currlevel+1);
 	}
-	
-	//Try for rightView
-	
-	//level order traversal : Iterative way.
-	//https://www.geeksforgeeks.org/level-order-tree-traversal/
-	
-	
-	//Print the kth Level only.
 	static void PrintKthLevel(Node root, int k) {
 		if(root==null) return;
 		
@@ -118,11 +90,6 @@ public class BinarySearchTree {
 		PrintKthLevel(root.left, k-1);
 		PrintKthLevel(root.right, k-1);
 	}
-	
-	
-	//level order traversal : Recursive way
-	//TC: O(N+h)
-	//SC: O(depth)
 	static void levelTraversal(Node root) {
 		int h = getHeight(root);
 		
@@ -131,7 +98,6 @@ public class BinarySearchTree {
 			System.out.println();
 		}
 	}
-
 	static void LevelOrderTraversal(Node root) {
 		Queue<Node> q = new LinkedList<>();
 		q.add(root);
@@ -174,56 +140,29 @@ public class BinarySearchTree {
 			System.out.println();
 		}
 	}
+	static int sum(Node root) 
+	{ 
+	    if (root == null) 
+	        return 0; 
+	    return (root.key + sum(root.left) + 
+	                       sum(root.right)); 
+	} 
     public static void main(String[] args)
 	{
 		Node root = new Node(1);
-
-		/*create root*/
-//		 root = new Node(1);
-
-		/* following is the tree after above statement
-			 1
-			/ \
-		null null	 */
-
 		root.left = new Node(2);
-		root.right = new Node(3);
-
-		/* 2 and 3 become left and right children of 1
-		   1
-		 /	 \
-		2	  3
-		/ \	 / \
-	null null null null */
-
-		root.left.left = new Node(4);
+		root.right = new Node(3);root.left.left = new Node(4);
 		root.left.right = new Node(5);
 		root.right.right = new Node(6);
-		/* 4 becomes left child of 2
-				  1
-				/	 \
-			 2		  3
-			/ \	    /   \
-			4  5   null  6
-		   / \
-		 null null
-		*/
-		
-		
-		// System.out.println(get_count(root));
-		// print_leafNodes(root);
-		// levelTraversal(root);
-		// PrintKthLevel(root, 2);
-		// LevelOrderTraversal(root);
 		LeftViewOfTree(root);
-//		leftView(root,0);
-//		preorder(root);
-//		System.out.println();
-//		postOrder(root);
-//		System.out.println();
-//		inorder(root);
-		
-//		System.out.println(maxDepth(root));
-//		System.out.println(get_count(root));
+		leftView(root,0);
+	preorder(root);
+		System.out.println();
+		postOrder(root);
+		System.out.println();
+		inorder(root);
+		System.out.println(get_count(root));
 	}
-	}
+}
+
+	
