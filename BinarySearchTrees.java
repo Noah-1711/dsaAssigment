@@ -13,7 +13,7 @@ class Node
 		left = right = null;
 	}
 }
-public class BinarySearchTree{
+public class BinarySearchTrees{
 	static int levelSoFar=0;
 	public static void preorder(Node root) {
 		if(root==null) return;
