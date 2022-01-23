@@ -2,7 +2,7 @@ package dsaassignment;
 import java.util.*;
 import java.util.LinkedList;
 
-public class AveragesOfBinaryTree {
+public class AveragesOfBinaryTrees {
 	static class Node {  
 	    int val;  
 	    Node left, right;  
