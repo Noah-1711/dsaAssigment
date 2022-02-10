@@ -26,13 +26,7 @@ public class ValidateBST {
             isValidBST(root.right, max, root.value);
     }
 
-    //      10 
-    //      / \
-    //     5  15
-    //    /\  / \
-    //   2  7 13 22
-    //  /      \
-    // 1       21   
+   
     public static void main( String args[] ) {
         // Creating a binary tree
         Node root = new Node(10); 
